@@ -7,5 +7,13 @@ Rails.application.routes.draw do
       resources :expenses
       devise_for :users, controllers: { session: "api/v1/sessions" }
     end
+    namespace :v2 do
+      mount_devise_token_auth_for 'User', at: 'auth'
+      resources :users
+      resources :sessions
+      resources :gains
+      resources :expenses
+    end
   end
+
 end

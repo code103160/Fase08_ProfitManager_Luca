@@ -49,3 +49,9 @@ group :development do
 end
 
 gem 'devise'
+
+gem 'active_model_serializers', '~> 0.10.0'
+gem "ransack", "~> 3.2"
+
+gem "devise_token_auth", "~> 1.2"
+gem "omniauth", "~> 2.1"
